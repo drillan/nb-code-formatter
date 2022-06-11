@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "nb_code_formatter"
+version = "0.1.0"
+description = "code formatter for ipynb files"
+authors = ["driller"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+nbformat = "^5.4.0"
+black = "^22.3.0"
+isort = "^5.10.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1"
+black = "^22.3.0"
+isort = "^5.10.1"
+flake8 = "^4.0.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+nbcodefmt = "nb_code_formatter:main"
