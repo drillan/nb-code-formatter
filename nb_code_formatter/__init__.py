@@ -2,16 +2,21 @@ import re
 
 import black
 import click
+import isort
 import nbformat
 
 __version__ = "0.1.0"
 NBFORMAT_VERSION = 4
 
 
-def format_code(cell_text):
+def black_formatter(cell_text):
     cell_text = re.sub("^%", "#%#", cell_text, flags=re.M)
     reformated_text = black.format_str(cell_text, mode=black.FileMode())
     return re.sub("^#%#", "%", reformated_text, flags=re.M)
+
+
+def format_code(cell_text):
+    return isort.code(black_formatter(cell_text))
 
 
 def format_nb(nb):
