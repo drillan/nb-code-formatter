@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nb_code_formatter"
-version = "0.1.0"
+version = "0.1.1"
 description = "code formatter for ipynb files"
 authors = ["driller"]
 repository = "https://github.com/drillan/nb-code-formatter"
@@ -17,6 +17,7 @@ pytest = "^7.1"
 black = "^22.3.0"
 isort = "^5.10.1"
 flake8 = "^4.0.1"
+mypy = "^0.961"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
